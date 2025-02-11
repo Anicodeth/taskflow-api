@@ -19,5 +19,7 @@ func NewRouter(s store.TaskStore) http.Handler {
 	mux.HandleFunc("POST /api/tasks", tasks.Create)
 	mux.HandleFunc("GET /api/tasks/{id}", tasks.Get)
 
+	// registrations:end
+
 	return Chain(mux, Recovery, Logging)
 }
