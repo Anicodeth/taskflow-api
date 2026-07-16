@@ -11,3 +11,4 @@
 [15:50:00] OK  [10/128] feat/tag-routes
 [15:50:32] OK  [11/128] test/tag-handler
 [15:51:00] OK  [12/128] test/tag-store
+[15:51:25] OK  [13/128] feat/comment-model
