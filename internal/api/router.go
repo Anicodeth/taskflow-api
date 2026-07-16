@@ -27,6 +27,10 @@ func NewRouter(s store.TaskStore) http.Handler {
 	mux.HandleFunc("GET /api/tags", tagH.List)
 	mux.HandleFunc("POST /api/tags", tagH.Create)
 	mux.HandleFunc("GET /api/tags/{id}", tagH.Get)
+	commentH := NewCommentHandler(store.NewCommentMemory())
+	mux.HandleFunc("GET /api/comments", commentH.List)
+	mux.HandleFunc("POST /api/comments", commentH.Create)
+	mux.HandleFunc("GET /api/comments/{id}", commentH.Get)
 	// registrations:end
 
 	return Chain(mux, Recovery, Logging)
