@@ -1,4 +1,4 @@
-package api
+﻿package api
 
 import (
 	"net/http"
@@ -19,6 +19,10 @@ func NewRouter(s store.TaskStore) http.Handler {
 	mux.HandleFunc("POST /api/tasks", tasks.Create)
 	mux.HandleFunc("GET /api/tasks/{id}", tasks.Get)
 
+	projectH := NewProjectHandler(store.NewProjectMemory())
+	mux.HandleFunc("GET /api/projects", projectH.List)
+	mux.HandleFunc("POST /api/projects", projectH.Create)
+	mux.HandleFunc("GET /api/projects/{id}", projectH.Get)
 	// registrations:end
 
 	return Chain(mux, Recovery, Logging)
