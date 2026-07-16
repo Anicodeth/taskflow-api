@@ -1,3 +1,4 @@
 ﻿[15:44:08] total steps: 128
 [15:44:33] OK  [1/128] feat/project-model
 [15:45:05] OK  [2/128] feat/project-store
+[15:45:34] OK  [3/128] feat/project-handler
