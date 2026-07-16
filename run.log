@@ -4,3 +4,4 @@
 [15:45:34] OK  [3/128] feat/project-handler
 [15:46:02] OK  [4/128] feat/project-routes
 [15:46:35] OK  [5/128] test/project-handler
+[15:47:22] OK  [6/128] test/project-store
