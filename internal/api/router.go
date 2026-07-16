@@ -23,6 +23,10 @@ func NewRouter(s store.TaskStore) http.Handler {
 	mux.HandleFunc("GET /api/projects", projectH.List)
 	mux.HandleFunc("POST /api/projects", projectH.Create)
 	mux.HandleFunc("GET /api/projects/{id}", projectH.Get)
+	tagH := NewTagHandler(store.NewTagMemory())
+	mux.HandleFunc("GET /api/tags", tagH.List)
+	mux.HandleFunc("POST /api/tags", tagH.Create)
+	mux.HandleFunc("GET /api/tags/{id}", tagH.Get)
 	// registrations:end
 
 	return Chain(mux, Recovery, Logging)
