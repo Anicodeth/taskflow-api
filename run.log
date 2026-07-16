@@ -7,3 +7,4 @@
 [15:47:22] OK  [6/128] test/project-store
 [15:47:49] OK  [7/128] feat/tag-model
 [15:49:05] OK  [8/128] feat/tag-store
+[15:49:33] OK  [9/128] feat/tag-handler
