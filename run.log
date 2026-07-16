@@ -10,3 +10,4 @@
 [15:49:33] OK  [9/128] feat/tag-handler
 [15:50:00] OK  [10/128] feat/tag-routes
 [15:50:32] OK  [11/128] test/tag-handler
+[15:51:00] OK  [12/128] test/tag-store
