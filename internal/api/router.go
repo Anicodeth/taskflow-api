@@ -35,6 +35,10 @@ func NewRouter(s store.TaskStore) http.Handler {
 	mux.HandleFunc("GET /api/users", userH.List)
 	mux.HandleFunc("POST /api/users", userH.Create)
 	mux.HandleFunc("GET /api/users/{id}", userH.Get)
+	labelH := NewLabelHandler(store.NewLabelMemory())
+	mux.HandleFunc("GET /api/labels", labelH.List)
+	mux.HandleFunc("POST /api/labels", labelH.Create)
+	mux.HandleFunc("GET /api/labels/{id}", labelH.Get)
 	// registrations:end
 
 	return Chain(mux, Recovery, Logging)
