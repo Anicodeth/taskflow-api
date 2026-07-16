@@ -14,3 +14,4 @@
 [15:51:25] OK  [13/128] feat/comment-model
 [15:51:51] OK  [14/128] feat/comment-store
 [15:52:57] OK  [15/128] feat/comment-handler
+[15:53:29] OK  [16/128] feat/comment-routes
